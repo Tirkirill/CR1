@@ -91,10 +91,10 @@ function print_cube() {
 
 function calculate() {
 	let arr = [];
-	for (var i = 0; i < 10; i++) {
-		var square_i = square(i);
-		var cube_i = cube(i);
-		var av = average(square_i, cube_i);
+	for (let i = 0; i < 10; i++) {
+		let square_i = square(i);
+		let cube_i = cube(i);
+		let av = average(square_i, cube_i);
 		arr.push(av);
 	}
 	return arr;
