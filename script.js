@@ -18,8 +18,10 @@ function greetings(name) {
 
 function range(arr, start, end) {
 	var res_arr = [];
-	for (var j = start; j < end; j++)
-		res_arr.push(arr[j]);
+	for (var j = 0; j < arr.length; j++) {
+		if (arr[j] <= end && arr[j] >= start)
+			res_arr.push(arr[j]);
+	}
 	return res_arr;
 }
 
@@ -27,20 +29,18 @@ function print_range() {
 	var start = 15;
 	var end = 30;
 	var arr = [];
-	for (var i = 0; i < end; i++)
+	for (var i = 15; i < 60; i++)
 		arr.push(i);
 
 	var task4 = document.getElementById("task4");
 	task4.innerHTML = "Исходный массив: " + arr.join(", ");
-
-
 	task4.innerHTML += "<br>Итог: " + range(arr, start, end).join(", ");
 }
 
 function rangeOdd(arr, start, end) {
 	var res_arr = [];
-	for (var j = start; j < end; j++)
-		if (arr[j] % 2 == 1)
+	for (var j = 0; j < arr.length; j++)
+		if (arr[j] % 2 == 1 && arr[j] >= start && arr[j] <= end)
 			res_arr.push(arr[j]);
 	return res_arr;
 }
@@ -49,7 +49,7 @@ function print_rangeOdd() {
 	var start = 15;
 	var end = 30;
 	var arr = [];
-	for (var i = 0; i < end; i++)
+	for (var i = 15; i < 60; i++)
 		arr.push(i);
 
 	var task5 = document.getElementById("task5");
